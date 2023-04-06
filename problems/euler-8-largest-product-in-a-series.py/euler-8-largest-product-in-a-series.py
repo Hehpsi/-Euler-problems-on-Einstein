@@ -1,33 +1,46 @@
 #!/usr/bin/env python3
 
-# Note...
-#
-# This solution is O(n * m), where n is the number of digits in the product, and m is
-# the number of digits in the input (1000).
-#
-# An O(m) solution should be possible.  The only trickyness would be dealing with 0s,
-# (although I think you can just treat "0" as "1").  SB.
-#
-
 import sys
+n = int(sys.argv[1])
 
-# from math import prod
+# We maintain the last n digits in a list which is accessed in
+# a circular manner.
 #
-# prod() isn't in python3.7, so we implement it here...
+# We treat 0s specially.  We keep track of the number of zeros
+# currently in the list.  If there are any zeros, then the current
+# product is just 0.
 #
-def prod(a):
-   product = 1
-   for v in a:
-      product = product * v
-   return product
+# Otherwise, we track the actual product in `product` by multiplying
+# and dividing as we proceed.
+#
 
-def main():
-    n_digits = int(sys.argv[1])
-    int_list = [int(i) for i in sys.stdin.readline()]
-    largest_product = max([prod(int_list[i: i + n_digits])
-                           for i in range(len(int_list) - n_digits + 1)])
-    print(largest_product)
+digits = [0] * n
+zeros = n
+curr = 0
 
+product = 1
+max_product = 0
 
-if __name__ == '__main__':
-    main()
+for digit in map(int, sys.stdin.readline().strip()):
+   # Relegate an old digit.
+   #
+   if digits[curr] == 0:
+      zeros -= 1
+   else:
+      product = product // digits[curr]
+   #
+   # Insert the new digit.
+   #
+   digits[curr] = digit
+   if digit == 0:
+      zeros += 1
+   else:
+      product = product * digit
+   curr = (curr + 1) % n
+   #
+   # New maximum?
+   #
+   if zeros == 0 and max_product < product:
+      max_product = product
+
+print(max_product)
