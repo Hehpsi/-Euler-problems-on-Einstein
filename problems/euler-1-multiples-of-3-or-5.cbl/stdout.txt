@@ -1,0 +1,14 @@
+$ ./euler-1-multiples-of-3-or-5_compiled 0
+000000000000000000
+$ ./euler-1-multiples-of-3-or-5_compiled 10
+000000000000000023
+$ ./euler-1-multiples-of-3-or-5_compiled 100
+000000000000002318
+$ ./euler-1-multiples-of-3-or-5_compiled 500
+000000000000057918
+$ ./euler-1-multiples-of-3-or-5_compiled 1000
+000000000000233168
+$ ./euler-1-multiples-of-3-or-5_compiled 5000
+000000000005829168
+$ ./euler-1-multiples-of-3-or-5_compiled 10000
+000000000023331668
