@@ -7,7 +7,7 @@ TASK="euler-100-arranged-probability"
 set -e
 
 # Compile the C++ code
-rustc -o ${TASK}_compiled ${TASK}.rs
+cobc -Wall -F -x -Os -o ${TASK}_compiled ${TASK}.cbl
 
 # The show-exec-command is available in the Einstein execution environment.
 # It is also available in the `bin` directory in the project repo.  You can
