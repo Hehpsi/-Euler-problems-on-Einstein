@@ -1,0 +1,14 @@
+$ ./euler-10-summation-of-primes_compiled 0
+0000000000000000
+$ ./euler-10-summation-of-primes_compiled 10
+0000000000000017
+$ ./euler-10-summation-of-primes_compiled 100
+0000000000001060
+$ ./euler-10-summation-of-primes_compiled 1000
+0000000000076127
+$ ./euler-10-summation-of-primes_compiled 10000
+0000000005736396
+$ ./euler-10-summation-of-primes_compiled 100000
+0000000454396537
+$ ./euler-10-summation-of-primes_compiled 2000000
+0000142913828922
