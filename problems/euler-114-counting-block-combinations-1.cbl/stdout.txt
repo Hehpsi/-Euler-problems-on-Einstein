@@ -1,0 +1,8 @@
+$ ./euler-114-counting-block-combinations-1_compiled 7
+000000000000000017
+$ ./euler-114-counting-block-combinations-1_compiled 14
+000000000000000493
+$ ./euler-114-counting-block-combinations-1_compiled 28
+000000000000416020
+$ ./euler-114-counting-block-combinations-1_compiled 50
+000000002053059121
