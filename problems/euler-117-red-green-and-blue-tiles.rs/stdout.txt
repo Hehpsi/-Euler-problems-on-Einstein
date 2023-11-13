@@ -1,0 +1,10 @@
+$ ./euler-117-red-green-and-blue-tiles_compiled 5
+15
+$ ./euler-117-red-green-and-blue-tiles_compiled 10
+401
+$ ./euler-117-red-green-and-blue-tiles_compiled 20
+283953
+$ ./euler-117-red-green-and-blue-tiles_compiled 40
+142368356257
+$ ./euler-117-red-green-and-blue-tiles_compiled 50
+100808458960497
