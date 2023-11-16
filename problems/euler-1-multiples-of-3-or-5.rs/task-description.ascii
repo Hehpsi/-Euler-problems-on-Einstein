@@ -10,17 +10,17 @@ Euler problem 1: https://projecteuler.net/problem=1[].
 
 .Task
 ****
-Assume a single command-line argument, a non-negative integer $n$.
+Assume a single command-line argument, a non-negative integer n.
 
-Write a Rust program named `euler_1_multiples_of_3_or_5.rs` that outputs the sum
-of all positive integers less than $n$ which are divisible by either 3 or 5 to standard output.
+Write a Rust program named `./euler-1-multiples-of-3-or-5_compiled` that outputs the sum
+of all positive integers less than n which are divisible by either 3 or 5 to standard output.
 
 Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
 ****
 
 .Example invocation
 ----
-$ ./euler_1_multiples_of_3_or_5 10
+$ ./euler-1-multiples-of-3-or-5_compiled 10
 ----
 
 .Example standard output
