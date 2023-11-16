@@ -5,4 +5,4 @@ $ ./euler-114-counting-block-combinations-1_compiled 14
 $ ./euler-114-counting-block-combinations-1_compiled 28
 000000000000416020
 $ ./euler-114-counting-block-combinations-1_compiled 50
-000000002053059121
+000000016475640049
