@@ -13,13 +13,13 @@ By finding the first arrangement to contain over 10^12 = 1,000,000,000,000$ disc
 
 .Task
 ****
-Write a Rust program named `euler_100_arranged_probability.rs` to determine the number of blue discs in the box with over $10^{12}$ total discs.
+Write a Rust program named `./euler-100-arranged-probability_compiled` to determine the number of blue discs in the box with over 10^12 total discs.
 
 .Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_]/.
 
 .Example Invocation
 ----
-$ ./euler_100_arranged_probability 1000000000000
+$ ./euler-100-arranged-probability_compiled 1000000000000
 ----
 
 .Example Output
