@@ -1,0 +1,33 @@
+= Project Euler Problem 117
+
+:toc:
+:source-highlighter: pygments
+
+== Problem Description
+
+Using a combination of grey square tiles and oblong tiles chosen from: red tiles (measuring two units), green tiles (measuring three units), and blue tiles (measuring four units), it is possible to tile a row measuring five units in length in exactly fifteen different ways.
+
+How many ways can a row measuring fifty units in length be tiled?
+
+== Rust
+
+.Task
+****
+Write a Rust program named `euler-117-tiling-ways.rs` to calculate the number of ways a row measuring fifty units in length can be tiled using the described tiles.
+
+.Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_]/.
+
+.Example Invocation
+----
+$ ./euler-117-tiling-ways
+----
+
+.Example Output
+----
+100808458960497
+----
+
+.Explanation
+****
+The number of ways a row measuring fifty units in length can be tiled is 100808458960497.
+****
