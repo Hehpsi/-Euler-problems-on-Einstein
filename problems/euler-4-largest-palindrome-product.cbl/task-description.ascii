@@ -51,7 +51,7 @@ $ ./euler_4_largest_palindrome_product 2
 
 .Example standard output
 ----
-9009
+000000000000009009
 ----
 
 .Explanation
