@@ -1,0 +1,30 @@
+= Project Euler Problem 10
+
+== Problem Description
+
+The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+Find the sum of all the primes below two million.
+
+== COBOL
+
+.Task
+****
+Write a COBOL program named `euler_10_sum_of_primes.cob` to find the sum of all prime numbers below two million.
+
+.Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_]/.
+
+.Example Invocation
+----
+$ ./euler_10_sum_of_primes 2000000
+----
+
+.Example Output
+----
+0000142913828922
+----
+
+.Explanation
+****
+The sum of all prime numbers below two million is 142913828922.
+****
