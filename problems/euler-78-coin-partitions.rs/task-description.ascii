@@ -10,13 +10,13 @@ Find the least value of n for which p(n) is divisible by one million.
 
 .Task
 ****
-Write a Rust program named `euler-78-coin-piles.rs` to find the least value of (n) for which p(n) is divisible by one million.
+Write a Rust program named `$ ./euler-78-coin-partitions_compiled` to find the least value of (n) for which p(n) is divisible by one million.
 
 .Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_]/.
 
 .Example Invocation
 ----
-$ ./euler-78-coin-piles
+$ ./euler-78-coin-partitions_compiled 1000000
 ----
 
 .Example Output
