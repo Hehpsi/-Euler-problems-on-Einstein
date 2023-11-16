@@ -20,17 +20,17 @@ Examples of palindromic numbers include:
 
 .Task
 ****
-Assume a single command-line argument, a positive integer $n$ in the range $1 \le n \le 4$.
+Assume a single command-line argument, a positive integer n in the range 1 \le n \le 4.
 
-Write a COBOL program named `euler_4_largest_palindrome_product.rs` that outputs the largest palindromic number that is
-the product of two $n$ digit numbers to standard output.
+Write a COBOL program named `$ ./euler-4-largest-palindrome-product_compiled` that outputs the largest palindromic number that is
+the product of two n digit numbers to standard output.
 
 Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
 ****
 
 .Example invocation
 ----
-$ ./euler_4_largest_palindrome_product 1
+$ ./euler-4-largest-palindrome-product_compiled 1
 ----
 
 .Example standard output
@@ -46,7 +46,7 @@ It may be counterintuitive, but all single-digit numbers are palindromes.
 
 .Example invocation
 ----
-$ ./euler_4_largest_palindrome_product 2
+$ ./euler-4-largest-palindrome-product_compiled 2
 ----
 
 .Example standard output
