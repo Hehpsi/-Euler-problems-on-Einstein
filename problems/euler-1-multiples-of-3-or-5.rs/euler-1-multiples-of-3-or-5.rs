@@ -1,38 +1,41 @@
+// <20% Problem 1
 use std::env;
 
-fn main() {
-    // get input
-    
-    let args: Vec<String> = env::args().collect();
-
-    let n = match (&args[1]).parse::<u32>() {
-        Ok(input) => input,
-        Err(_) => {
-            eprintln!("Invalid Input!");
-            return
-        }
-    };
-
-    // Call the function to calculate the sum of multiples of 3 or 5 below 1000
-    let sum = sum_of_multiples_below_limit(n);
-    // Print the result to the console
-    println!("{}", sum);
+// Define a struct named `SumOfMultiples` that represents the sum of multiples of 3 or 5 below a given limit.
+struct SumOfMultiples {
+    limit: u32,
 }
 
-// Define a function to calculate the sum of multiples of 3 or 5 below a given limit
-fn sum_of_multiples_below_limit(limit: u32) -> u32 {
-    let mut sum = 0;
-
-    // Iterate through numbers from 1 to (limit - 1)
-    for num in 1..limit {
-        // Check if the current number is a multiple of 3 or 5
-        if num % 3 == 0 || num % 5 == 0 {
-            // If it is, add it to the running sum
-            sum += num;
-        }
+impl SumOfMultiples {
+    // Define a new function for the SumOfMultiples struct that takes a limit parameter and returns a SumOfMultiples instance.
+    fn new(limit: u32) -> Self {
+        Self { limit }
     }
 
-    // Return the final sum as the result of the function
-    sum
+    // Define a calculate_sum method for the SumOfMultiples struct that calculates and returns the sum of multiples of 3 or 5 below the limit.
+    fn calculate_sum(&self) -> u32 {
+        let mut sum = 0;
+
+        // Iterate through numbers from 1 to the limit (exclusive).
+        for num in 1..self.limit {
+            // Check if the number is divisible by 3 or 5.
+            if num % 3 == 0 || num % 5 == 0 {
+                // If it is, add it to the sum.
+                sum += num;
+            }
+        }
+
+        sum
+    }
 }
 
+fn main() {
+    // Get the limit from the command line arguments.
+    let args: Vec<String> = env::args().collect();
+    let limit: u32 = args[1].parse().expect("Invalid limit provided.");
+
+    // Create an instance of SumOfMultiples with the provided limit.
+    let sum_of_multiples = SumOfMultiples::new(limit);
+    let sum = sum_of_multiples.calculate_sum(); 
+    println!("{}", sum);
+}
