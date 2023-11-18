@@ -1,40 +1,51 @@
-use std::env;
 // 31-40% Problem 117
-fn compute(length : usize) -> String {
-    // Dynamic programming approach to calculate the number of ways
-    
-    // Initialize an array to store the number of ways
-    let mut ways: [u64; 51] = [0; 51];
-    
-    // Initialize the base case: there is 1 way for the length of 0
-    ways[0] = 1;
-    
-    // Iterate through the array to compute the number of ways for each length
-    for n in 1..ways.len() {
-        // Calculate the number of ways for the current length by summing values from previous lengths
 
-        ways[n] += ways.iter()
-            .take(n)  // Consider values up to the current length
-            .skip(n.saturating_sub(4))  // Skip values from more than 4 positions back to avoid negative indices
-            .sum::<u64>();  // Sum the selected values
+use std::env;
+
+// Define a struct named `WaysCal` to calculate the number of ways to reach a score using a certain number of steps
+struct WaysCal {
+    ways: [u64; 51], // Number of ways to reach each score, up to a maximum of 50 steps
+}
+
+impl WaysCal {
+    // Define a function `new` for the `WaysCal` struct that initializes the `ways` array with zeros.
+    fn new() -> Self {
+        Self { ways: [0; 51] }
     }
 
-    // Convert the final value at index length to a string and return it
-    ways[length].to_string()
+    // Define a function `compute` for the `WaysCal` struct that computes the number of ways to reach a score using a certain number of steps.
+    fn compute(&mut self, target_score: u64) -> String {
+        self.ways[0] = 1; 
+        for n in 1..self.ways.len() {
+            self.ways[n] += self.ways.iter()
+                .take(n) 
+                .skip(n.saturating_sub(4)) 
+                .sum::<u64>(); 
+        }
+
+        self.ways[target_score as usize].to_string() // Return the number of ways to reach the target score as a string.
+    }
 }
 
 fn main() {
+    // Get the target score from the command line argument.
     let args: Vec<String> = env::args().collect();
-    let l : usize = match (&args[1]).parse::<usize>() {
-       Ok(i) => i,
-       Err(_) => {
-           eprintln!("Invalid Input");
-           return
-       }
-    };
-    if l > 50 {
+
+    if args.len() < 2 {
+        println!("Please provide the target score as a command line argument.");
         return;
     }
-    // Calculate the number of ways using the `compute` function and print the result
-    println!("{}", compute(l));
+
+    // Parse the target score from the command line argument.
+    let target_score: u64 = match args[1].parse() {
+        Ok(score) => score,
+        Err(_) => {
+            println!("Invalid target score provided.");
+            return;
+        }
+    };
+    let mut ways_calculator = WaysCal::new(); // Create a new instance of `WaysCal`.
+    let result = ways_calculator.compute(target_score); 
+    println!("{}", result); 
 }
+
