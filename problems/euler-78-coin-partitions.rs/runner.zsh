@@ -14,5 +14,5 @@ rustc -o ${TASK}_compiled ${TASK}.rs
 # install it locally from there for testing.
 for v in 100 1000 10000 100000 1000000
 do
-  show-exec-command ./${TASK}_compiled $v
+  ./show-exec-command ./${TASK}_compiled $v
 done
