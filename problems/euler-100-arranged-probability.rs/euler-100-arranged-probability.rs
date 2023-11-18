@@ -1,30 +1,49 @@
-use std::env;
 // 20-30% Problem 100
 
-fn main() {
-    let args: Vec<String> = env::args().collect();
-    let l : u64 = match (&args[1]).parse::<u64>() {
-       Ok(i) => i,
-       Err(_) => {
-           eprintln!("Invalid Input");
-           return
-       }
-    };
+use std::env;
 
-    let mut b: u64 = 85; // Initialize the number of blue disks with 85.
-    let mut n: u64 = 120; // Initialize another variable with 120.
+// Define a struct named `DiskCalculator` that represents a disk calculation with blue disks, total disks, and limit.
+struct DiskCalculator {
+    b: u64, // represents the number of blue disks
+    n: u64, // represents the total number of disks
+    l: u64, // represents the maximum limit
+}
 
-    // Continue the loop while 'n' is less than or equal to the threshold value 'l'.
-    while n <= l {
-        // Calculate the new values for 'b' and 'n' based on specific formulas.
-        let new_b = 3 * b + 2 * n - 2;
-        let new_n = 4 * b + 3 * n - 3;
-        
-        // Update 'b' and 'n' with the newly calculated values.
-        b = new_b;
-        n = new_n;
+impl DiskCalculator {
+    // Define a new function for the DiskCalculator struct that takes parameters b, n, and l, and returns a DiskCalculator instance.
+    fn new(b: u64, n: u64, l: u64) -> Self {
+        Self { b, n, l }
     }
 
-    // Print the final results after the loop has completed.
-    println!("{}", b); // Print the final number of blue disks.
+    // Define a calculate_disk_count method for the DiskCalculator struct that calculates the number of disks.
+    fn calculate_disk_count(&mut self) {
+        while self.n <= self.l {
+            let new_b = 3 * self.b + 2 * self.n - 2;
+            let new_n = 4 * self.b + 3 * self.n - 3;
+            self.b = new_b;
+            self.n = new_n;
+        }
+    }
+
+    // Define a print_results method for the DiskCalculator struct that prints the calculated results.
+    fn print_results(&self) {
+        println!("Number of Blue disks = {}", self.b);
+    }
+}
+
+fn main() {
+    // Get the limit from the command line arguments.
+    let args: Vec<String> = env::args().collect();
+
+    if args.len() < 2 {
+        println!("Please provide the maximum limit as a command line argument.");
+        return;
+    }
+
+    let limit: u64 = args[1].parse().expect("Invalid limit provided.");
+
+    // Create an instance of DiskCalculator with initial values of 85, 120, and the provided limit.
+    let mut disk_calculator = DiskCalculator::new(85, 120, limit);
+    disk_calculator.calculate_disk_count();
+    disk_calculator.print_results();
 }
