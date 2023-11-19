@@ -1,0 +1,30 @@
+= Project Euler Problem 117
+
+== Problem Description
+
+Using a combination of grey square tiles and oblong tiles chosen from: red tiles (measuring two units), green tiles (measuring three units), and blue tiles (measuring four units), it is possible to tile a row measuring five units in length in exactly fifteen different ways.
+
+How many ways can a row measuring fifty units in length be tiled?
+
+== COBOL
+
+.Task
+****
+Write a COBOL program named `euler-117-red-green-and-blue-tiles_compiled` to calculate the number of ways a row measuring fifty units in length can be tiled using the described tiles.
+
+.Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_]/.
+
+.Example Invocation
+----
+$ ./euler-117-red-green-and-blue-tiles_compiled 50
+----
+
+.Example Output
+----
+00000100808458960497
+----
+
+.Explanation
+****
+The number of ways a row measuring fifty units in length can be tiled is 100808458960497.
+****
