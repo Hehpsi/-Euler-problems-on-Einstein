@@ -16,21 +16,21 @@ How many hexadecimal numbers containing at most sixteen hexadecimal digits exist
 
 .Task
 ****
-Write a COBOL program named `euler-162-hexadecimal-numbers.cbl` to calculate the number of hexadecimal numbers containing at most sixteen hexadecimal digits with all of the digits 0, 1, and A present at least once.
+Write a COBOL program named `euler-162-hexadecimal-numbers_compiled` to calculate the number of hexadecimal numbers containing at most sixteen hexadecimal digits with all of the digits 0, 1, and A present at least once.
 
 .Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_]/.
 
 .Example Invocation
 ----
-$ ./euler-162-hexadecimal-numbers
+$ ./euler-162-hexadecimal-numbers_compiled 16
 ----
 
 .Example Output
 ----
-Number of hexadecimal numbers: 1A3F
+Number of hexadecimal numbers: 3D58725572C62302
 ----
 
 .Explanation
 ****
-The number of hexadecimal numbers with the specified conditions is 1A3F.
+The number of hexadecimal numbers with the specified conditions is 3D58725572C62302.
 ****
