@@ -1,0 +1,30 @@
+= Project Euler Problem 78
+
+== Problem Description
+
+Let p(n) represent the number of different ways in which n coins can be separated into piles. For example, five coins can be separated into piles in exactly seven different ways, so p(5)=7.
+
+Find the least value of n for which p(n) is divisible by one million.
+
+== Rust
+
+.Task
+****
+Write a Rust program named `$ ./euler-78-coin-partitions_compiled` to find the least value of (n) for which p(n) is divisible by one million.
+
+.Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_]/.
+
+.Example Invocation
+----
+$ ./euler-78-coin-partitions_compiled 1000000
+----
+
+.Example Output
+----
+55374
+----
+
+.Explanation
+****
+The least value of n for which p(n) is divisible by one million is 55374.
+****

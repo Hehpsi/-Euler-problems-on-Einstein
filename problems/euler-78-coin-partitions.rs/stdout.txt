@@ -1,0 +1,10 @@
+$ ./euler-78-coin-partitions_compiled 100
+74
+$ ./euler-78-coin-partitions_compiled 1000
+449
+$ ./euler-78-coin-partitions_compiled 10000
+599
+$ ./euler-78-coin-partitions_compiled 100000
+11224
+$ ./euler-78-coin-partitions_compiled 1000000
+55374
