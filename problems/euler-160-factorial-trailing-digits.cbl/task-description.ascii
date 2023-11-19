@@ -19,21 +19,21 @@ Find (f(1,000,000,000,000)).
 
 .Task
 ****
-Write a COBOL program named `euler-160-factorial-last-five-digits.cbl` to calculate (f(1,000,000,000,000)).
+Write a COBOL program named `$ ./euler-160-factorial-trailing-digits_compiled` to calculate (f(1,000,000,000,000)).
 
 .Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_]/.
 
 .Example Invocation
 ----
-$ ./euler-160-factorial-last-five-digits
+$ ./euler-160-factorial-trailing-digits_compiled 1000000000000
 ----
 
 .Example Output
 ----
-Last five digits before trailing zeroes: 12345
+Last five digits before trailing zeroes: 16576
 ----
 
 .Explanation
 ****
-The last five digits before the trailing zeroes in \(1,000,000,000,000!\) are 12345.
+The last five digits before the trailing zeroes in (1,000,000,000,000!) are 16576.
 ****
