@@ -1,0 +1,61 @@
+// //////////////////////////////////////////////////////////////
+= Euler 4
+
+****
+Euler problem 4: https://projecteuler.net/problem=4[].
+****
+
+.Palindromic numbers
+****
+https://en.wikipedia.org/wiki/Palindromic_number[Palindromic numbers] are numbers that read the same forwards and backwards.
+
+Examples of palindromic numbers include:
+- 4
+- 99
+- 5335
+****
+
+// //////////////////////////////////////////////////////////////
+== COBOL
+
+.Task
+****
+Assume a single command-line argument, a positive integer n in the range 1 \le n \le 4.
+
+Write a COBOL program named `$ ./euler-4-largest-palindrome-product_compiled` that outputs the largest palindromic number that is
+the product of two n digit numbers to standard output.
+
+Upload your solution to https://euler.computing.dcu.ie/einstein/[_Einstein_].
+****
+
+.Example invocation
+----
+$ ./euler-4-largest-palindrome-product_compiled 1
+----
+
+.Example standard output
+----
+9
+----
+
+.Explanation
+****
+The largest palindromic product of two 1-digit numbers is $9 \times 1 = 9$.
+It may be counterintuitive, but all single-digit numbers are palindromes.
+****
+
+.Example invocation
+----
+$ ./euler-4-largest-palindrome-product_compiled 2
+----
+
+.Example standard output
+----
+000000000000009009
+----
+
+.Explanation
+****
+The largest palindromic product of two 2-digit numbers is $99 \times 91 = 9009$.
+Note that the answer isn't $9999$, because it can't be represented as a product of two 2-digit numbers.
+**** 
