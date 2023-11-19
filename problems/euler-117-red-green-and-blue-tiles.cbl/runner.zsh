@@ -7,7 +7,7 @@ TASK="euler-117-red-green-and-blue-tiles"
 set -e
 
 # Compile the C++ code
-cobc -w -F -x -Os -o ${TASK}_compiled euler-117.cbl
+cobc -w -x -Os -o ${TASK}_compiled euler-117.cbl
 
 # The show-exec-command is available in the Einstein execution environment.
 # It is also available in the `bin` directory in the project repo.  You can
