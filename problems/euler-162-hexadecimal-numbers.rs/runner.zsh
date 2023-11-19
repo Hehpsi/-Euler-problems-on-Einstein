@@ -12,5 +12,5 @@ rustc -o ${TASK}_compiled ${TASK}.rs
 ## test
 for v in 3 10 16
 do
-  ./show-exec-command ./${TASK}_compiled $v
+  show-exec-command ./${TASK}_compiled $v
 done
