@@ -1,0 +1,6 @@
+$ ./euler-3-largest-prime-factor_compiled 13195
+00000029
+$ ./euler-3-largest-prime-factor_compiled 1313346
+00000307
+$ ./euler-3-largest-prime-factor_compiled 600851475143
+00006857
