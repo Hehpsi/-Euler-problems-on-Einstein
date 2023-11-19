@@ -1,0 +1,8 @@
+$ ./euler-114-counting-block-combinations-1_compiled 7
+17
+$ ./euler-114-counting-block-combinations-1_compiled 14
+493
+$ ./euler-114-counting-block-combinations-1_compiled 28
+416020
+$ ./euler-114-counting-block-combinations-1_compiled 50
+16475640049
